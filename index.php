@@ -7,5 +7,5 @@ echo '<h1 class="page-title">Download '.$js['title'].'</h1><ul>';
 for($i=0;$i<5;$i++){
 echo '<li><a class="mp4" href="'.$d[$i]['id'].'" class="top">Download Video '.$d[$i]['label'].'</a></li>';
 }
-echo '</ul>';
+echo '</ul><br><center>Thanks you for downloading<br><a href="http://www.satriamusic.com/">SatriaMusic.com</a>';
 ?>
