@@ -38,12 +38,12 @@ $bod=str_replace('/site-download.html', '?url=http://harianlagu.wapqu.com/site-d
 if(!empty($_GET['url'])){
   
   $linkdownload=maling($bod, 'http://cdn32.filewapqu.com/server8.php', '"');
-  $linkart=maling($bod, 'Breadcrumb"><span itemprop="title">', '<');
+  $linkart=maling($bod, '<span>', '<');
   $linkt=maling($bod, 'http://cdn31.filewapqu.com/img.php', '"');
-echo '<center><form method="post" action="/upload.php" >
+echo '<center><br><form method="post" action="/upload.php" >
 <input name="url" size="50" value="http://cdn32.filewapqu.com/server8.php'.$linkdownload.'"/>
 <input name="submit" type="submit" />
-</form><br><br><textarea>http://cdn31.filewapqu.com/img.php'.$linkt.'</textarea><br><br><textarea>http://cdn32.filewapqu.com/server8.php'.$linkdownload.'</textarea><br><br><textarea>'.$linkart.'</textarea>';
+</form><br><br>'.$linkart.'<br><br><textarea>http://cdn31.filewapqu.com/img.php'.$linkt.'</textarea><br><br><textarea>http://cdn32.filewapqu.com/server8.php'.$linkdownload.'</textarea>';
 }else{
 echo strip_tags($bod, '<a><div><br>');
 }
