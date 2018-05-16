@@ -39,7 +39,7 @@ if(!empty($_GET['url'])){
   
   $linkdownload=maling($bod, 'http://cdn32.filewapqu.com/server8.php', '"');
   $linkart=maling($bod, 'Breadcrumb"><span itemprop="title">', '<');
-echo '<center><textarea>http://cdn32.filewapqu.com/server8.php'.urlencode($linkdownload).'</textarea><br><br><textarea>'.$linkart.'</textarea>';
+echo '<center><textarea>http://cdn32.filewapqu.com/server8.php'.$linkdownload.'</textarea><br><br><textarea>'.$linkart.'</textarea>';
 }else{
 echo strip_tags($bod, '<a><div><br>');
 }
