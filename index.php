@@ -36,8 +36,10 @@ $bod=maling($gg, '<body>', '</body>');
 $bod=str_replace('?to-page=', '?page=', $bod);
 $bod=str_replace('/site-download.html', '?url=http://harianlagu.wapqu.com/site-download.html', $bod);
 if(!empty($_GET['url'])){
+  
   $linkdownload=maling($bod, 'http://cdn32.filewapqu.com/server8.php', '"');
-echo '<center><textarea>http://cdn32.filewapqu.com/server8.php'.$linkdownload.'</textarea>';
+  $linkart=maling($bod, 'Breadcrumb"><span itemprop="title">', '<');
+echo '<center><textarea>http://cdn32.filewapqu.com/server8.php'.urlencode($linkdownload).'</textarea><br><br><textarea>'.$linkart.'</textarea>';
 }else{
 echo strip_tags($bod, '<a><div><br>');
 }
