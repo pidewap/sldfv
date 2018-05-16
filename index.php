@@ -40,7 +40,10 @@ if(!empty($_GET['url'])){
   $linkdownload=maling($bod, 'http://cdn32.filewapqu.com/server8.php', '"');
   $linkart=maling($bod, 'Breadcrumb"><span itemprop="title">', '<');
   $linkt=maling($bod, 'http://cdn31.filewapqu.com/img.php', '"');
-echo '<center><textarea>http://cdn31.filewapqu.com/img.php'.$linkt.'</textarea><br><br><textarea>http://cdn32.filewapqu.com/server8.php'.$linkdownload.'</textarea><br><br><textarea>'.$linkart.'</textarea>';
+echo '<center><form method="post" action="/upload.php" >
+<input name="url" size="50" value="http://cdn32.filewapqu.com/server8.php'.$linkdownload.'"/>
+<input name="submit" type="submit" />
+</form><br><br><textarea>http://cdn31.filewapqu.com/img.php'.$linkt.'</textarea><br><br><textarea>http://cdn32.filewapqu.com/server8.php'.$linkdownload.'</textarea><br><br><textarea>'.$linkart.'</textarea>';
 }else{
 echo strip_tags($bod, '<a><div><br>');
 }
