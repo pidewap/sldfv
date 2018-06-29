@@ -41,7 +41,7 @@ if(!empty($_GET['url'])){
   $linkart=maling($bod, '<span>', '<');
   $linkt=maling($bod, '/img.php', '"');
 echo '<center><br><form method="post" action="/upload.php" >
-<input name="url" size="50" value="http://cdn30.filewapqu.com/downloads9/'.$linkdownload.'"/>
+<input name="url" size="50" value="http://cdn30.filewapqu.com/downloads9/'.urlencode($linkdownload).'"/>
 <input name="submit" type="submit" />
 </form><br><br>'.$linkart.'<br><br><textarea>http://cdn31.filewapqu.com/img.php'.$linkt.'</textarea><br><br><textarea>http://cdn30.filewapqu.com/downloads9/'.$linkdownload.'</textarea>';
 }else{
