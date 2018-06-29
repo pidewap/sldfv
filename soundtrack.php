@@ -37,11 +37,11 @@ $bod=str_replace('?to-page=', '?page=', $bod);
 $bod=str_replace('/site-download.html', '?url=http://harianlagu.wapqu.com/site-download.html', $bod);
 if(!empty($_GET['url'])){
   
-  $linkdownload=maling($bod, 'http://cdn30.filewapqu.com/downloads9/', '"');
+  $linkdownload=maling($bod, 'http://cdn30.filewapqu.com/downloads9/harianlagu+wapqu+com/', '"');
   $linkart=maling($bod, '<span>', '<');
   $linkt=maling($bod, '/img.php', '"');
 echo '<center><br><form method="post" action="/upload.php" >
-<input name="url" size="50" value="http://cdn30.filewapqu.com/downloads9/'.urlencode($linkdownload).'"/>
+<input name="url" size="50" value="http://cdn30.filewapqu.com/downloads9/harianlagu+wapqu+com/'.str_replace(' ','%20',$linkdownload).'"/>
 <input name="submit" type="submit" />
 </form><br><br>'.$linkart.'<br><br><textarea>http://cdn31.filewapqu.com/img.php'.$linkt.'</textarea><br><br><textarea>http://cdn30.filewapqu.com/downloads9/'.urlencode($linkdownload).'</textarea>';
 }else{
