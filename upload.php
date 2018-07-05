@@ -26,7 +26,7 @@ if (!isset($_POST['submit'])) die();
 $destination_folder = 'download/';
 
 $url = $_POST['url'];
-$newfname = $destination_folder . basename($url);
+$newfname = $destination_folder . md5(basename($url));
 
 $file = fopen ($url, "rb");
 if ($file) {
