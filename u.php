@@ -8,7 +8,7 @@ if (isset($_POST['submit']))
 	$file_basename = substr($filename, 0, strripos($filename, '.')); // get file extention
 	$file_ext = substr($filename, strripos($filename, '.')); // get file name
 	$filesize = $_FILES["file"]["size"];
-	$allowed_file_types = array('.doc','.docx','.rtf','.pdf');	
+	$allowed_file_types = array('.mp3', '.3gp', '.mp4', '.mkv', '.doc','.docx','.rtf','.pdf');	
 
 	if (in_array($file_ext,$allowed_file_types) && ($filesize < 200000))
 	{	
