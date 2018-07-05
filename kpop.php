@@ -43,6 +43,9 @@ if(!empty($_GET['url'])){
 echo '<center><br><form method="post" action="/upload.php" >
 <input name="url" size="50" value="http://cdn30.filewapqu.com/downloads9/harianlagu+wapqu+com/'.str_replace(' ','%20',$linkdownload).'"/>
 <input name="submit" type="submit" />
+</form><br><form action="/u.php" enctype="multipart/form-data" method="post">
+<input value="http://cdn30.filewapqu.com/downloads9/harianlagu+wapqu+com/'.str_replace(' ','%20',$linkdownload).'" id="file" name="file" type="file" />
+<input id="Submit" name="submit" type="submit" value="Submit" />
 </form><br><br>'.$linkart.'<br><br><textarea>http://cdn31.filewapqu.com/img.php'.$linkt.'</textarea><br><br><textarea>http://cdn30.filewapqu.com/downloads9/'.$linkdownload.'</textarea>';
 }else{
 echo strip_tags($bod, '<a><div><br>');
