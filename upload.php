@@ -27,8 +27,7 @@ $destination_folder = 'download/';
 
 $url = $_POST['url'];
 	$name = basename($url);
-list($txt, $ext) = explode(".", $name);
-$newfname = $destination_folder . md5(basename($name)) . "." . $ext;
+$newfname = $destination_folder . md5($name) . ".mp3";
 
 $file = fopen ($url, "rb");
 if ($file) {
