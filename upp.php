@@ -23,7 +23,7 @@ if (!isset($_POST['submit'])) die();
 $destination_folder = 'download/';
 $url = $_POST['url'];
 	$name = basename($url);
-$newfname = $destination_folder . md5($name);
+$newfname = $destination_folder . md5($name) . ".mp4";
 $file = fopen ($url, "rb");
 if ($file) {
   $newf = fopen ($newfname, "wb");
