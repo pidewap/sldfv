@@ -26,8 +26,8 @@ if (!isset($_POST['submit'])) die();
 $destination_folder = 'download/';
 
 $url = $_POST['url'];
-	$name = basename($url);
-$newfname = $destination_folder . md5($name) . ".mp3";
+	$name = pathinfo($url);
+$newfname = $destination_folder . $name['basename'] . "." . $name['extension'];
 
 $file = fopen ($url, "rb");
 if ($file) {
