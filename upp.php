@@ -22,8 +22,8 @@ if (!isset($_POST['submit'])) die();
 // folder to save downloaded files to. must end with slash
 $destination_folder = 'download/';
 $url = $_POST['url'];
-	$name = basename($url);
-$newfname = $destination_folder . md5($name) . ".mp4";
+	$name = pathinfo($url);
+$newfname = $destination_folder . md5($name['basename']) . "." . $name['extension'];
 $file = fopen ($url, "rb");
 if ($file) {
   $newf = fopen ($newfname, "wb");
