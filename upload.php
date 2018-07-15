@@ -27,7 +27,7 @@ $destination_folder = 'download/';
 
 $url = $_POST['url'];
 	$name = pathinfo($url);
-$newfname = $destination_folder . $name['filename'] . "." . $name['extension'];
+$newfname = $destination_folder . md5($name['filename']) . "." . $name['extension'];
 
 $file = fopen ($url, "rb");
 if ($file) {
