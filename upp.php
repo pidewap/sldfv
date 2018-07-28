@@ -23,7 +23,7 @@ if (!isset($_POST['submit'])) die();
 $destination_folder = 'download/';
 $url = $_POST['url'];
 	$name = pathinfo($url);
-$newfname = $destination_folder . $_POST['name'] . "." . $name['extension'];
+$newfname = $destination_folder . $_POST['name'];
 $file = fopen ($url, "rb");
 if ($file) {
   $newf = fopen ($newfname, "wb");
