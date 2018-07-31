@@ -5,7 +5,7 @@
 <img src="http://cdn.wrock.org/logo.png" alt="Sharing Latest Tips Tricks and Tutorials">
 		</a>
 	<br><p><br></p><form method="post">
-<input name="url" size="50" />
+url:<br><input name="url" size="50" /><br>name:<br><input name="name" size="50" />
 <input name="submit" type="submit" />
 </form>
 
@@ -23,7 +23,7 @@ if (!isset($_POST['submit'])) die();
 $destination_folder = 'download/';
 $url = $_POST['url'];
 	$name = pathinfo($url);
-$newfname = $destination_folder . md5($name['filename']) . ".mp4";
+$newfname = $destination_folder . md5($_POST['name']) . ".mp4";
 $file = fopen ($url, "rb");
 if ($file) {
   $newf = fopen ($newfname, "wb");
