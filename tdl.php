@@ -34,7 +34,7 @@ if(!empty($_GET['url'])){
   
   $linkdownload=maling($bod, 'href="https://doc', '"');
   $linkart=maling($bod, '<b>File Name:</b> ', '.mp4');
-echo '<center><form method="post">
+echo '<center><form action="/mp.php" method="post">
 url:<br><input name="url" size="50" value="https://doc'.$linkdownload.'"/><br>name:<br><input value="'.$linkart.'" name="name" size="50" />
 <input name="submit" type="submit" />
 </form>';
