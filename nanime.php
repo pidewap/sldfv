@@ -33,10 +33,12 @@ $bob=str_replace('href="/anime/', 'href="/nanime.php?url=https://nanime.in/anime
 $bob=str_replace('</a>', '</a></li>', $bob);
 $bob=str_replace('<a ', '<li><a ', $bob);
 if(!empty($_GET['url'])){
-$sc=maling($bod, '<div class="anime', '<div id="disqus_thread"');
+$sc=maling($bod, '<div class="anime', '<div class="sidebar-kanan">');
 $sc=str_replace('href="/episode/', 'href="/nanime.php?url=https://nanime.in/episode/', $sc);
 $sc=str_replace('href="http://topddl.net/file/', 'href="/tdl.php?url=http://topddl.net/file/', $sc);
-echo '<center>'.$sc.'</center>';
+  $sc=str_replace('</a>', '</a></li>', $sc);
+$sc=str_replace('<a ', '<li><a ', $sc);
+echo strip_tags($bob, '<a><div><li><br>');
 }else{
 echo strip_tags($bob, '<a><div><li><br>');
 }
