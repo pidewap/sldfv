@@ -36,7 +36,7 @@ if(!empty($_GET['url'])){
 $sc=maling($bod, '<div class="download-link">', '<div id="disqus_thread"></div>');
 $sc=str_replace('href="/episode/', 'href="/nanime.php?url=https://nanime.in/episode/', $bod);
 $sc=str_replace('href="http://topddl.net/file/', 'href="/tdl.php?url=http://topddl.net/file/', $bod);
-echo '<center>'.$sc.'</center>';
+echo '<center>'.$sca.'</center>';
 }else{
 echo strip_tags($bob, '<a><div><li><br>');
 }
