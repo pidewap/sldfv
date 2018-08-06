@@ -29,7 +29,7 @@ $f=file(''.$urr.'');
 $gg=@implode($f);
 $bod=maling($gg, '</head>', '</html>');
 $bob=maling($bod, '<div class="sidebar-kiri">','<div class="col-md-7">');
-$bod=str_replace('/anime/', '/nanime.php?url=https://nanime.in/anime/', $bod);
+$bob=str_replace('href="/anime/', 'href="/nanime.php?url=https://nanime.in/anime/', $bob);
 if(!empty($_GET['url'])){
 $sc=maling($bod, '<div class="animeInfo">', '<div id="disqus_thread"></div>');
 $sc=str_replace('/episode/', '/nanime.php?url=https://nanime.in/episode/', $bod);
