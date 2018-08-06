@@ -33,12 +33,17 @@ $bob=str_replace('href="/anime/', 'href="/nanime.php?url=https://nanime.in/anime
 $bob=str_replace('</a>', '</a></li>', $bob);
 $bob=str_replace('<a ', '<li><a ', $bob);
 if(!empty($_GET['url'])){
-$sc=maling($bod, '<div class="anime', '<div class="sidebar-kanan">');
+$sc=maling($bod, '<div class="episodelist list-group">', '</div>');
 $sc=str_replace('href="/episode/', 'href="/nanime.php?url=https://nanime.in/episode/', $sc);
-$sc=str_replace('href="http://topddl.net/file/', 'href="/tdl.php?url=http://topddl.net/file/', $sc);
   $sc=str_replace('</a>', '</a></li>', $sc);
 $sc=str_replace('<a ', '<li><a ', $sc);
-echo strip_tags($sc, '<a><li><br>');
+echo strip_tags($sc, '<a><li>');
+  $scc=maling($bod, '<div class="col-md-12 text-center">', '</div></div></div></div></div>');
+$scc=str_replace('href="http://topddl.net/file/', 'href="/tdl.php?url=http://topddl.net/file/', $scc);
+  $scc=str_replace('</a>', '</a></li>', $scc);
+$scc=str_replace('<a ', '<li><a ', $scc);
+echo strip_tags($scc, '<a><li>');
+  
 }else{
 echo strip_tags($bob, '<a><div><li><br>');
 }
