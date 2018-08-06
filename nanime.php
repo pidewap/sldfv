@@ -38,7 +38,7 @@ $sc=str_replace('href="/episode/', 'href="/nanime.php?url=https://nanime.in/epis
 $sc=str_replace('href="http://topddl.net/file/', 'href="/tdl.php?url=http://topddl.net/file/', $sc);
   $sc=str_replace('</a>', '</a></li>', $sc);
 $sc=str_replace('<a ', '<li><a ', $sc);
-echo strip_tags($bob, '<a><div><li><br>');
+echo strip_tags($sc, '<a><li><br>');
 }else{
 echo strip_tags($bob, '<a><div><li><br>');
 }
