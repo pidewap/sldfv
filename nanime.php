@@ -39,7 +39,7 @@ $sc=str_replace('href="/episode/', 'href="/nanime.php?url=https://nanime.in/epis
 $sc=str_replace('<a ', '<li><a ', $sc);
 echo strip_tags($sc, '<a><li>');
   $iscc=maling($bod, 'title="Nonton anime: ', '"');
-  echo '<center><img src="'.iscc.'"><p></p>';
+  echo '<center><img src="'.$iscc.'"><p></p>';
   $scc=maling($bod, '<div class="col-md-12 text-center">', '</div></div></div></div></div>');
 $scc=str_replace('href="http://topddl.net/file/', 'href="/tdl.php?url=http://topddl.net/file/', $scc);
   $scc=str_replace('</a>', '</a></li>', $scc);
