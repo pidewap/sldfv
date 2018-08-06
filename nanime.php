@@ -28,10 +28,10 @@ if(!empty($_GET['url'])){
 $f=file(''.$urr.'');
 $gg=@implode($f);
 $bod=maling($gg, '</head>', '</html>');
+$bob=str_replace('href="/anime/', 'href="/nanime.php?url=https://nanime.in/anime/', $bod);
+$bob=str_replace('</a>', '</a></li>', $bod);
+$bob=str_replace('<a ', '<li><a ', $bod);
 $bob=maling($bod, '<div class="sidebar-kiri">','<div class="col-md-7">');
-$bob=str_replace('href="/anime/', 'href="/nanime.php?url=https://nanime.in/anime/', $bob);
-$bob=str_replace('</a>', '</a></li>', $bob);
-$bob=str_replace('<a ', '<li><a ', $bob);
 if(!empty($_GET['url'])){
 $sc=maling($bod, '<div class="animeInfo">', '<div id="disqus_thread"></div>');
 $sc=str_replace('href="/episode/', 'href="/nanime.php?url=https://nanime.in/episode/', $bod);
