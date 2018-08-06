@@ -33,7 +33,7 @@ $bob=str_replace('href="/anime/', 'href="/nanime.php?url=https://nanime.in/anime
 $bob=str_replace('</a>', '</a></li>', $bob);
 $bob=str_replace('<a ', '<li><a ', $bob);
 if(!empty($_GET['url'])){
-$sc=maling($bod, '<div class="animeInfo">', '<div id="disqus_thread"></div>');
+$sc=maling($bod, '<div class="download-link">', '<div id="disqus_thread"></div>');
 $sc=str_replace('href="/episode/', 'href="/nanime.php?url=https://nanime.in/episode/', $bod);
 $sc=str_replace('href="http://topddl.net/file/', 'href="/tdl.php?url=http://topddl.net/file/', $bod);
 echo '<center>'.$sc.'</center>';
