@@ -33,9 +33,8 @@ $bod=str_replace('/site-download.html', '?url=http://harianlagu.wapqu.com/site-d
 if(!empty($_GET['url'])){
   
   $linkdownload=maling($bod, 'href="https://doc', '"');
-  $linkart=maling($bod, '<b>File Name:</b> ', '.m');
 echo '<center><form action="/mp.php" method="post">
-url:<br><input name="url" size="50" value="https://doc'.$linkdownload.'"/><br>name:<br><input value="'.$_GET['q'].'" name="name" size="50" />
+url:<br><input name="url" size="50" value="https://doc'.$linkdownload.'"/><br>name:<br><input value="'.str_replace('http://topddl.net/file/', '', $_GET['url']).'" name="name" size="50" />
 <input name="submit" type="submit" />
 </form>';
 }else{
