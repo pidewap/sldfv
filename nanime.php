@@ -21,14 +21,14 @@ ini_set('user_agent',$uarand."\r\naccept: text/html, application/xml;q=0.9, appl
 if(!empty($_GET['url'])){
   $urr=$_GET['url'];
 }else{
-  $urr='https://nanime.in/';
+  $urr='https://nanime.in/?page='.$_GET['page'].'';
 }
 
 
 $f=file(''.$urr.'');
 $gg=@implode($f);
 $bod=maling($gg, '</head>', '</html>');
-$bob=maling($bod, '<div class="sidebar-kiri">','<div class="col-md-7">');
+$bob=maling($bod, '<div class="sidebar-kiri">','<div class="sidebar-kanan">');
 $bob=str_replace('href="/anime/', 'href="/nanime.php?url=https://nanime.in/anime/', $bob);
 $bob=str_replace('</a>', '</a></li>', $bob);
 $bob=str_replace('<a ', '<li><a ', $bob);
