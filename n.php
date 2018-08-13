@@ -45,7 +45,7 @@ $scc=str_replace('href="http://topddl.net/file/', 'href="/tdl.php?url=http://top
   $scc=str_replace('</a>', '</a></li>', $scc);
 $scc=str_replace('<a ', '<li><a ', $scc);
   $scc=str_replace(' target="_blank" ', ' ', $scc);
-echo strip_tags($scc, '<a><li>');
+echo strip_tags($scc, '<a><li><img>');
   
   
 }else{
