@@ -46,7 +46,7 @@ if(!empty($_GET['url'])){
    
    $sc=maling($gg, 'individual tracks:<br />', '</p>');
    $sc=str_replace('https://k2nblog.com/download.html?u=', '', $sc);
-   $result=strip_tags($sc, '<a>');
+   $result=strip_tags($sc, '<a><br>');
    
    $linklink=''.$linkdownload.'<p></p>'.$sc.'';
    
