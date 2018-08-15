@@ -49,6 +49,6 @@ echo strip_tags($scc, '<a><li>');
   
   
 }else{
-echo strip_tags($bob, '<a><div><li><br>');
+echo strip_tags($bob, '<a><li><img>');
 }
 ?>
