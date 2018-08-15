@@ -32,7 +32,7 @@ if(!empty($_GET['url'])){
 
 $f=file(''.$urr.'');
 $gg=@implode($f);
-$bod=maling($gg, '</head>', '</html>');
+$bod=maling($gg, '</header>', '</body>');
 $bod=str_replace('/"', '"', $bod);
 $bod=str_replace('https://k2nblog.com/category/single-album/k-pop/page/', '/lagu.php?page=', $bod);
 $bod=str_replace('https://k2nblog.com/category/single-album/page/', '/lagu.php?page=', $bod);
@@ -44,7 +44,7 @@ if(!empty($_GET['url'])){
   $linkdownload=str_replace('iTunes:', '<b>iTunes:</b>', $linkdownload);
   $linkdownload=str_replace('MP3:', '<b>MP3:</b>', $linkdownload);
    
-   $sc=maling($gg, 'individual tracks:<br />', '<!--endhidelink-->');
+   $sc=maling($gg, 'individual tracks:<br />', '</p>');
    $sc=str_replace('https://k2nblog.com/download.html?u=', '', $sc);
    $result=strip_tags($sc, '<a>');
    
