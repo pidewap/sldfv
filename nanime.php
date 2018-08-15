@@ -30,6 +30,7 @@ $gg=@implode($f);
 $bod=maling($gg, '</head>', '</html>');
 $bob=maling($bod, '<div class="sidebar-kiri">','<div class="sidebar-kanan">');
 $bob=str_replace('href="/anime/', 'href="/nanime.php?url=https://nanime.in/anime/', $bob);
+$bob=str_replace('href="/?page=', 'href="/nanime.php?page=', $bob);
 $bob=str_replace('</a>', '</a></li>', $bob);
 $bob=str_replace('<a ', '<li><a ', $bob);
 if(!empty($_GET['url'])){
