@@ -46,9 +46,9 @@ if(!empty($_GET['url'])){
    
    $sc=maling($gg, 'individual tracks:<br />', '</p>');
    $sc=str_replace('https://k2nblog.com/download/', '', $sc);
-   $result=strip_tags($sc, '<a><br>');
+   $resultt=strip_tags($sc, '<a><br>');
    
-   $linklink=''.$linkdownload.'<p></p>'.$result.'';
+   $linklink=$resultt;
    
    $dom = new DOMDocument;
 @$dom->loadHTML($linklink, LIBXML_HTML_NODEFDTD);
@@ -57,7 +57,7 @@ foreach ($anchors as $anchor) {
     $anchor->setAttribute('href', '' . base64_decode($anchor->getAttribute('href')));
 }
 
-$resultt = $dom->saveHTML();
+$result = $dom->saveHTML();
 
   $result=str_replace('http://linkshrink.net/zfb5=', '', $result);
   $result=str_replace('https://www.4shared.com', 'http://www.4shared.one', $result);
