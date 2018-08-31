@@ -48,10 +48,10 @@ if(!empty($_GET['url'])){
    $sc=str_replace('https://k2nblog.com/download/', '', $sc);
    $result=strip_tags($sc, '<a><br>');
    
-   $linklink=''.$linkdownload.'<p></p>'.$sc.'';
+   $linklink=''.$linkdownload.'<p></p>'.$result.'';
    
    $dom = new DOMDocument;
-@$dom->loadHTML($sc, LIBXML_HTML_NODEFDTD);
+@$dom->loadHTML($linklink, LIBXML_HTML_NODEFDTD);
 $anchors = $dom->getElementsByTagName('a');
 foreach ($anchors as $anchor) {
     $anchor->setAttribute('href', '' . base64_decode($anchor->getAttribute('href')));
