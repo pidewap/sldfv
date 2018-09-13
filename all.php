@@ -23,22 +23,22 @@ $pages=''.$_GET['page'].'';
 if(!empty($_GET['url'])){
   $urr=$_GET['url'];
 }else{
-  $urr='http://harianlagu.wapqu.com/site-all-music.html?to-page='.$pages.'';
+  $urr='http://harianlagu.net/site-all-music.html?to-page='.$pages.'';
 }
 $f=file(''.$urr.'');
 $gg=@implode($f);
 $bod=maling($gg, '<body>', '</body>');
 $bod=str_replace('?to-page=', '?page=', $bod);
-$bod=str_replace('/site-download.html', '?url=http://harianlagu.wapqu.com/site-download.html', $bod);
+$bod=str_replace('/site-download.html', '?url=http://harianlagu.net/site-download.html', $bod);
 if(!empty($_GET['url'])){
   
-  $linkdownload=maling($bod, 'http://cdn30.filewapqu.com/downloads9/harianlagu+wapqu+com/', '"');
+  $linkdownload=maling($bod, '"download/', '"');
   $linkart=maling($bod, '<span>', '<');
-  $linkt=maling($bod, '/img.php', '"');
+  $linkt=maling($bod, 'http://harianlagu.net/music/thumb/', '"');
 echo '<center><br><form method="post" action="/upload.php" >
-<input name="url" size="50" value="http://cdn30.filewapqu.com/downloads9/harianlagu+wapqu+com/'.str_replace(' ','%20',$linkdownload).'"/>
+<input name="url" size="50" value="http://harianlagu.net/download/'.str_replace(' ','%20',$linkdownload).'"/>
 <input name="submit" type="submit" />
-</form><br><br>'.$linkart.'<br><br><textarea>http://cdn31.filewapqu.com/img.php'.$linkt.'</textarea><br><br><textarea>http://cdn30.filewapqu.com/downloads9/'.$linkdownload.'</textarea>';
+</form><br><br>'.$linkart.'<br><br><textarea>http://harianlagu.net/music/thumb/'.$linkt.'</textarea><br><br><textarea>http://harianlagu.net/download/'.$linkdownload.'</textarea>';
 }else{
 echo strip_tags($bod, '<a><div><br>');
 }
