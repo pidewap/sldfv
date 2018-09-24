@@ -70,10 +70,11 @@ $result = $dom->saveHTML();
   $hdesc=maling($bod, '<p>Track List:', '</p>');
   $artist=maling($gg, 'property="og:description" content="', ' - ');
   $imgs=maling($gg, '<p><center><img src="', '"');
+  $nulis=maling($gg, '<p><center>', '<h4>Download');
   $linkdo=strip_tags($linkdownload, '<b><a><br>');
 echo '<center><textarea>'.str_replace('https', 'http', $imgs).'</textarea><br/>
 '.$result.'<p></p>'.$artist.'<p></p>'.$hdesc.'
-</center>';
+</center><br><p>'.strip_tags($nulis, '<br>').'</p>';
 }else{
 echo strip_tags($bod, '<a><div><p><br>');
 }
