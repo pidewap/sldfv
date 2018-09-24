@@ -75,7 +75,7 @@ $result = $dom->saveHTML();
   $linkdo=strip_tags($linkdownload, '<b><a><br>');
 echo '<center><textarea>'.str_replace('https', 'http', $imgs).'</textarea><br/>
 '.$result.'<p></p>'.$artist.'<p></p>'.$hdesc.'
-</center><br><p>'.strip_tags($nulis, '<br>').'</p>';
+<br><p><textarea><center><img src="'.str_replace('https', 'http', $imgs).'" width="500" />'.strip_tags($nulis, '<br>').'</textarea></p></center>';
 }else{
 echo strip_tags($bod, '<a><div><p><br>');
 }
