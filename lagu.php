@@ -71,11 +71,12 @@ $result = $dom->saveHTML();
   $artist=maling($gg, 'property="og:description" content="', ' - ');
   $imgs=maling($gg, '<p><center><img src="', '"');
   $nulis=maling($gg, '<p><center>', '<h4>Download');
+  $tnulis=maling($gg, 'entry-title">', '</h1>');
   $nulis=str_replace('Track', '<br /><br />Track', $nulis);
   $linkdo=strip_tags($linkdownload, '<b><a><br>');
 echo '<center><textarea>'.str_replace('https', 'http', $imgs).'</textarea><br/>
 '.$result.'<p></p>'.$artist.'<p></p>'.$hdesc.'
-<br><p><textarea><center><img src="'.str_replace('https', 'http', $imgs).'" width="500" />'.strip_tags($nulis, '<br>').'</textarea></p></center>';
+<br><p><textarea>'.$tnulis.'<textarea><br><textarea><center><img src="'.str_replace('https', 'http', $imgs).'" width="500" /></center>'.strip_tags($nulis, '<br>').'</textarea></p></center>';
 }else{
 echo strip_tags($bod, '<a><div><p><br>');
 }
