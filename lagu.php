@@ -71,6 +71,7 @@ $result = $dom->saveHTML();
   $artist=maling($gg, 'property="og:description" content="', ' - ');
   $imgs=maling($gg, '<p><center><img src="', '"');
   $nulis=maling($gg, '<p><center>', '<h4>Download');
+  $nulis=str_replace('Track', '<br /><br />Track', $nulis);
   $linkdo=strip_tags($linkdownload, '<b><a><br>');
 echo '<center><textarea>'.str_replace('https', 'http', $imgs).'</textarea><br/>
 '.$result.'<p></p>'.$artist.'<p></p>'.$hdesc.'
